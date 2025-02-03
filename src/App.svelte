@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  const token = "BQASRfYAGOJQyE8_HCWMXNPDsFeFuG6xByHxHutYs29eFnvJlpX87q7lJSlBh99bNo_YZYeQ2qZeFEzDHfep4T8NpSStOJa45v_NkkiDKUJCxd1PeJh143ZtXLtOegH-m19xGakSTiP-qglz0RvyY8HbajSIWCnq7nm39zz5aqekb7szbPO3FeeMlOVoeoFoztJY-8EJqwQvDNq7E-eWFAUej38r-lYRkHdgRebDn_w7fWSiZ5GL8FPdzSsfMMF8MYJMY5fZRaDNOHBwAXSOGGkyKl6Luh1pjbx8OObI1YWRzIakfCraAXPvdQo0"; // ⚠️ Spotify API Access Token으로 변경
+  const token = "BQDgiftbSePCIFvRKGQplHifx6hryovh-FPFxh5ZwLLmrEvB5E1MviChzjOOWSPWj42b58wTHTdsDBX-ohH3cYy1BvvZlonAFmEORahbgtLfNYz6DDsyaspu80JaFI6XKUjo4b_42azqEU20U52XJrpkKcu7pvEdb0_ME2CLvYs0H357inSteEa_lvabZXAoCviQupWqKAleF8FPinCLfQAJLRO7Xfh8MwTQT3VB139qFpzpS4SEsijUVZ_D5JD6WRI1U9UtaBQU8AKyVjMa2-iVOAukVuLPDyqOmJaOEldYJxHIPDEN"; // ⚠️ Spotify API Access Token으로 변경
 
   let searchQuery = ""; // 검색어
   let searchResults = []; // 검색 결과
