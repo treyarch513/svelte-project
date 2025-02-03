@@ -1,47 +1,17 @@
-# Svelte + Vite
+curl -X POST "https://accounts.spotify.com/api/token" \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=authorization_code" \
+     -d "code=AQCro9OE2HvytRz3Yyp0D5LpS5dAgFwSJdXYuDzRm2OSmJ9IXBA1D3B0Z_UcKxLAUp27i_rnGCAo-T2JvLlEgHblCTUDp9_KLikaY7vR3waMNUDZmXf2hxBQJ5vm2zRuqhni8vT3TjlLlOQJ6corzvxXfVnIf9vpOniu15bRUzbOL2e9Xf9sCtATadYTFPMoYO27FHXGVDBbbBJ7uE-Bk5M3RQtE7AaeFzJPP4VT4Fy4nqLDR8bddDZ4-Di7oG5AmxvT4m_Uy3MvXjWT77HM" \
+     -d "redirect_uri=http://localhost:5173/" \
+     -d "client_id=0ff07a899a8845c88e23c98afbce43ab" \
+     -d "client_secret=55f10044db254b02aa33dee00a4883e3"
 
-This template should help get you started developing with Svelte in Vite.
 
-## Recommended IDE Setup
+http://localhost:5173/?code=AQB-VP3mzocpFPqhOuMC_Rf_sH4SjtByW10OJL91sNWYD80VFLStcxnSh4zLFwQJn1FJqWtPFoN8PP8Sy7elEPvrQfxMxeE0v7YzIczYhbzgHK5v1t0xz_vO0nX35lIfO_u5E1asxNhhTZCrg-iDrdzhNzO6KhHmUD49VfjP8kdbi7ewDj3aGV4fMGO-
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+https://accounts.spotify.com/authorize?client_id=0ff07a899a8845c88e23c98afbce43ab&response_type=code&redirect_uri=http://localhost:5173/&scope=user-read-private
 
-## Need an official Svelte framework?
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
-
-## Technical considerations
-
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `checkJs` in the JS template?**
-
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+0ff07a899a8845c88e23c98afbce43ab #클라이언트 ID
+55f10044db254b02aa33dee00a4883e3 #클라이언트 시크릿
+https://accounts.spotify.com/authorize?client_id=0ff07a899a8845c88e23c98afbce43ab&response_type=code&redirect_uri=http://localhost:5173/&scope=user-read-private%20user-read-email%20playlist-modify-public%20playlist-modify-private #auth코드
